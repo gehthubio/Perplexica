@@ -7,6 +7,8 @@ services:
       - data:/home/perplexica/data
       - uploads:/home/perplexica/uploads
     restart: unless-stopped
+labels:
+  - 'traefik.http.middlewares.mybasicauth.basicauth.users=isaac:$apr1$y2polvws$OZROsQ0jdC/8Q6L/Foblx0'
 
 volumes:
   data:
